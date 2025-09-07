@@ -104,54 +104,7 @@ window.addEventListener('resize', function() {
     }
 });
 
-// Resume Download Functionality
-document.getElementById('resume-download').addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    // Create a simple PDF content (you can replace this with actual resume data)
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-    
-    // Add content to PDF
-    doc.setFontSize(20);
-    doc.text('Sajal Kumar', 20, 30);
-    
-    doc.setFontSize(12);
-    doc.text('Computer Science Student | Bennett University', 20, 45);
-    doc.text('Email: sajalkumar1765@gmail.com', 20, 55);
-    doc.text('GitHub: github.com/ydvSajal', 20, 65);
-    
-    doc.setFontSize(16);
-    doc.text('Education', 20, 85);
-    doc.setFontSize(12);
-    doc.text('B.Tech in Computer Science Engineering', 20, 95);
-    doc.text('Bennett University (2024 - 2028)', 20, 105);
-    
-    doc.setFontSize(16);
-    doc.text('Skills', 20, 125);
-    doc.setFontSize(12);
-    doc.text('• Programming: Python, Java, JavaScript', 20, 135);
-    doc.text('• Web Development: HTML, CSS, JavaScript', 20, 145);
-    doc.text('• Database: SQL, Database Design', 20, 155);
-    doc.text('• Game Development: Pygame, Game Logic', 20, 165);
-    
-    doc.setFontSize(16);
-    doc.text('Projects', 20, 185);
-    doc.setFontSize(12);
-    doc.text('• BU_Basket - Campus marketplace platform', 20, 195);
-    doc.text('• 10 CGPA Educational Website - Study materials platform', 20, 205);
-    doc.text('• Student-Life-OS - Academic management application', 20, 215);
-    doc.text('• Gym Log App - Fitness tracking application', 20, 225);
-    doc.text('• Snake Game - Classic game implementation', 20, 235);
-    
-    // Save the PDF
-    doc.save('Sajal_Kumar_Resume.pdf');
-});
-
-// Load jsPDF library
-const jsPDFScript = document.createElement('script');
-jsPDFScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
-document.head.appendChild(jsPDFScript);
+// Resume download now handled directly by HTML link to Sajal-Resume.pdf
 
 // Enhanced animation on scroll with better performance
 const fadeElements = document.querySelectorAll('.fade-in');
